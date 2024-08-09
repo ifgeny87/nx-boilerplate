@@ -2,10 +2,14 @@
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
+import { myLib01 } from 'my-lib01';
+import { myLib02 } from 'my-lib02';
 
 export function App() {
 	return (
 		<div>
+			<div>lib01 says: {myLib01()}</div>
+			<div>lib02 says: {myLib02()}</div>
 			<NxWelcome title="my-front" />
 
 			{/* START: routes */}
