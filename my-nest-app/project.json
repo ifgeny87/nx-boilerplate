@@ -1,0 +1,26 @@
+{
+	"name": "my-nest-app",
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "my-nest-app/src",
+	"projectType": "application",
+	"tags": [],
+	"targets": {
+		"serve": {
+			"dependsOn": ["build"],
+			"executor": "@nx/js:node",
+			"options": {
+				"buildTarget": "my-nest-app:build",
+				"runBuildTargetDependencies": false
+			},
+			"defaultConfiguration": "development",
+			"configurations": {
+				"development": {
+					"buildTarget": "my-nest-app:build:development"
+				},
+				"production": {
+					"buildTarget": "my-nest-app:build:production"
+				}
+			}
+		}
+	}
+}
