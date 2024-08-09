@@ -32,6 +32,15 @@
 				"previewTargetName": "preview",
 				"serveStaticTargetName": "serve-static"
 			}
+		},
+		{
+			"plugin": "@nx/cypress/plugin",
+			"options": {
+				"targetName": "e2e",
+				"openTargetName": "open-cypress",
+				"componentTestingTargetName": "component-test",
+				"ciTargetName": "e2e-ci"
+			}
 		}
 	],
 	"targetDefaults": {
@@ -39,6 +48,23 @@
 			"cache": true,
 			"dependsOn": ["^build"],
 			"inputs": ["default", "^default"]
+		}
+	},
+	"generators": {
+		"@nx/react": {
+			"application": {
+				"babel": true,
+				"style": "scss",
+				"linter": "eslint",
+				"bundler": "vite"
+			},
+			"component": {
+				"style": "scss"
+			},
+			"library": {
+				"style": "scss",
+				"linter": "eslint"
+			}
 		}
 	}
 }
