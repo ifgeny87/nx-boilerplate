@@ -22,6 +22,16 @@
 				"targetName": "test"
 			},
 			"exclude": ["e2e/my-nest-app-e2e/**/*"]
+		},
+		{
+			"plugin": "@nx/vite/plugin",
+			"options": {
+				"buildTargetName": "build",
+				"testTargetName": "test",
+				"serveTargetName": "serve",
+				"previewTargetName": "preview",
+				"serveStaticTargetName": "serve-static"
+			}
 		}
 	]
 }
