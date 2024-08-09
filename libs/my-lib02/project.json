@@ -1,0 +1,19 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "my-lib02",
+	"sourceRoot": "libs/my-lib02/src",
+	"projectType": "library",
+	"tags": [],
+	"targets": {
+		"build_1": {
+			"executor": "@nx/js:tsc",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/libs/my-lib02",
+				"main": "libs/my-lib02/src/index.ts",
+				"tsConfig": "libs/my-lib02/tsconfig.lib.json",
+				"assets": ["libs/my-lib02/*.md"]
+			}
+		}
+	}
+}

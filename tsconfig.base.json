@@ -10,11 +10,15 @@
 		"importHelpers": true,
 		"target": "es2015",
 		"module": "esnext",
+		"allowSyntheticDefaultImports": true,
 		"lib": ["es2020", "dom"],
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
-		"paths": {}
+		"paths": {
+			"my-lib01": ["libs/my-lib01/src/index.ts"],
+			"my-lib02": ["libs/my-lib02/src/index.ts"]
+		}
 	},
 	"exclude": ["node_modules", "tmp"]
 }

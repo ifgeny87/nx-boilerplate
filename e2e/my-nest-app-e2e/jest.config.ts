@@ -10,5 +10,5 @@ export default {
 		'^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
 	},
 	moduleFileExtensions: ['ts', 'js', 'html'],
-	coverageDirectory: '../../coverage/my-nest-app-e2e',
+	coverageDirectory: '../../coverage/e2e/my-nest-app-e2e',
 };
