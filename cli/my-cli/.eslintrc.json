@@ -1,0 +1,9 @@
+{
+	"extends": [
+		"../../.eslintrc.json",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"oclif",
+		"oclif-typescript"
+	]
+}

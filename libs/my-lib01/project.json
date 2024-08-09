@@ -5,11 +5,11 @@
 	"projectType": "library",
 	"tags": [],
 	"targets": {
-		"build_`": {
+		"build-for-cli": {
 			"executor": "@nx/js:tsc",
 			"outputs": ["{options.outputPath}"],
 			"options": {
-				"outputPath": "dist/libs/my-lib01",
+				"outputPath": "cli/my-cli/node_modules/my-lib01",
 				"main": "libs/my-lib01/src/index.ts",
 				"tsConfig": "libs/my-lib01/tsconfig.lib.json",
 				"assets": ["libs/my-lib01/*.md"]
