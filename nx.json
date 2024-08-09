@@ -21,7 +21,7 @@
 			"options": {
 				"targetName": "test"
 			},
-			"exclude": ["e2e/my-nest-app-e2e/**/*"]
+			"exclude": ["e2e/my-nest-app-e2e/**/*", "e2e/my-node-app-e2e/**/*"]
 		},
 		{
 			"plugin": "@nx/vite/plugin",
@@ -45,6 +45,11 @@
 	],
 	"targetDefaults": {
 		"@nx/js:tsc": {
+			"cache": true,
+			"dependsOn": ["^build"],
+			"inputs": ["default", "^default"]
+		},
+		"@nx/esbuild:esbuild": {
 			"cache": true,
 			"dependsOn": ["^build"],
 			"inputs": ["default", "^default"]
