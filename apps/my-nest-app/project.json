@@ -1,7 +1,7 @@
 {
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"name": "my-nest-app",
-	"$schema": "../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "my-nest-app/src",
+	"sourceRoot": "apps/my-nest-app/src",
 	"projectType": "application",
 	"tags": [],
 	"targets": {

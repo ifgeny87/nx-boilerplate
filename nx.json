@@ -21,7 +21,7 @@
 			"options": {
 				"targetName": "test"
 			},
-			"exclude": ["my-nest-app-e2e/**/*"]
+			"exclude": ["e2e/my-nest-app-e2e/**/*"]
 		}
 	]
 }

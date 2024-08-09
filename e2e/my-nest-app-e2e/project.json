@@ -1,17 +1,14 @@
 {
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"name": "my-nest-app-e2e",
-	"$schema": "../node_modules/nx/schemas/project-schema.json",
 	"projectType": "application",
-	"implicitDependencies": [
-		"my-nest-app"
-	],
+	"implicitDependencies": [],
 	"targets": {
 		"e2e": {
-			"dependsOn": ["my-nest-app:build"],
 			"executor": "@nx/jest:jest",
 			"outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
 			"options": {
-				"jestConfig": "my-nest-app-e2e/jest.config.ts",
+				"jestConfig": "e2e/my-nest-app-e2e/jest.config.ts",
 				"passWithNoTests": true
 			}
 		}
