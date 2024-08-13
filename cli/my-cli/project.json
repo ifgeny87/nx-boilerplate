@@ -1,0 +1,9 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "my-cli",
+	"sourceRoot": "cli/my-cli/src",
+	"projectType": "application",
+	"tags": [],
+	"targets": {
+	}
+}

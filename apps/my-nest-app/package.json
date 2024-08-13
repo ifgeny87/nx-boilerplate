@@ -1,5 +1,8 @@
 {
 	"name": "my-nest-app",
 	"version": "0.0.1",
-	"type": "module"
+	"type": "module",
+	"engines": {
+		"node": ">=20.14"
+	}
 }

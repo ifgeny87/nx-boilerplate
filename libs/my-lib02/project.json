@@ -3,9 +3,13 @@
 	"name": "my-lib02",
 	"sourceRoot": "libs/my-lib02/src",
 	"projectType": "library",
+	"implicitDependencies": [
+		"my-lib01"
+	],
 	"tags": [],
 	"targets": {
 		"build-for-cli": {
+			"dependsOn": ["^build-for-cli"],
 			"executor": "@nx/js:tsc",
 			"outputs": ["{options.outputPath}"],
 			"options": {

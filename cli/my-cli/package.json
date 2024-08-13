@@ -5,7 +5,7 @@
 		"cli/my-cli": "./bin/run.js"
 	},
 	"engines": {
-		"node": ">=18.0.0"
+		"node": ">=20.14"
 	},
 	"files": [
 		"/bin",
@@ -27,10 +27,11 @@
 	},
 	"scripts": {
 		"build": "shx rm -rf dist && tsc -b",
-		"lint": "eslint . --ext .ts",
+		"lint": "eslint .",
 		"postpack": "shx rm -f oclif.manifest.json",
-		"posttest": "npm run lint",
 		"prepack": "oclif manifest && oclif readme",
+		"coverage": "nyc npm run test",
+		"test": "mocha",
 		"version": "oclif readme && git add README.md"
 	},
 	"types": "dist/index.d.ts",

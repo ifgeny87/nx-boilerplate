@@ -1,0 +1,66 @@
+{
+	"name": "@ips.su/ta",
+	"$schema": "node_modules/nx/schemas/project-schema.json",
+	"implicitDependencies": [
+		"my-lib01",
+		"my-lib02",
+		"my-front-app",
+		"my-front-app-e2e",
+		"my-nest-app",
+		"my-nest-app-e2e",
+		"my-node-app",
+		"my-node-app-e2e",
+		"my-cli"
+	],
+	"projectType": "application",
+	"targets": {
+		"lint": {
+			"dependsOn": ["^lint"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "echo Lint DONE"
+			}
+		},
+		"test": {
+			"dependsOn": ["^test"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "echo Test DONE"
+			}
+		},
+		"e2e": {
+			"dependsOn": ["^e2e"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "echo e2e DONE"
+			}
+		},
+		"build-for-cli": {
+			"dependsOn": ["^build-for-cli"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "echo Build for CLI DONE"
+			}
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "echo Build DONE"
+			}
+		},
+		"semantic-release": {
+			"dependsOn": ["build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": [
+					"rm -rf dist",
+					"semantic-release"
+				],
+				"parallel": false
+			}
+		}
+	},
+	"tags": []
+}
