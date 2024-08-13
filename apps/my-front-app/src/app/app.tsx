@@ -10,7 +10,7 @@ export function App() {
 		<div>
 			<div>lib01 says: {myLib01()}</div>
 			<div>lib02 says: {myLib02()}</div>
-			<NxWelcome title="my-front" />
+			<NxWelcome title="my-front-app" />
 
 			{/* START: routes */}
 			{/* These routes and navigation have been generated for you */}
